@@ -50,25 +50,26 @@ A modern, intelligent email assistant built in Python. Connects to your IMAP ema
 
 ## 🗂️ Project Structure
 
+The project is currently organized as follows:
+
 ```
-imap-mcp/
-├── imap_mcp/                # Core source code (IMAP client, tools, models, etc.)
-│   ├── config.py            # Configuration handling
-│   ├── imap_client.py       # IMAP protocol logic (connect, fetch, search, etc.)
-│   ├── models.py            # Data models for emails, addresses, attachments
-│   ├── smtp_client.py       # Email composition and MIME message creation
-│   ├── tools.py             # High-level tools for actions, draft saving, etc.
-│   └── ...                  # Other core modules
-├── tests/                   # Automated test suite
-│   └── ...
-├── draft_replies_json.py    # Script: filter meeting/event emails, draft & save replies
-├── email_actions.py         # Script: move, delete, mark, flag emails
-├── read_email_by_uid.py     # Script: read a specific email by UID
-├── list_folders_direct.py   # Script: list all folders
-├── config.yaml              # Your IMAP/Gmail config (user-supplied, not in repo)
-├── pyproject.toml           # Project configuration and dependencies
-├── README.md                # Project documentation (this file)
-└── ...                      # Other supporting files (e.g., .gitignore, LICENSE)
+.
+├── examples/              # Example configurations
+│   └── config.yaml.example
+├── imap_mcp/              # Source code
+│   ├── __init__.py
+│   ├── config.py           # Configuration handling
+│   ├── imap_client.py      # IMAP client implementation
+│   ├── models.py           # Data models
+│   ├── resources.py        # MCP resources implementation
+│   ├── server.py           # Main server implementation
+│   └── tools.py            # MCP tools implementation
+├── tests/                 # Test suite
+│   ├── __init__.py
+│   └── test_models.py
+├── INSTALLATION.md        # Detailed installation guide
+├── pyproject.toml         # Project configuration
+└── README.md              # This file
 ```
 
 **Key Points:**
